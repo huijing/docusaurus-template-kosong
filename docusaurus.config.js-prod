@@ -1,0 +1,37 @@
+module.exports = {
+  title: 'SITE_NAME',
+  tagline: 'SITE_TAGLINE',
+  url: 'https://your-site.com',
+  baseUrl: '/',
+  favicon: 'img/favicons/favicon.ico',
+  organizationName: 'ORG_NAME', // Usually your GitHub org/user name.
+  projectName: 'PROJECT_NAME', // Usually your repo name.
+  themeConfig: {
+    navbar: {
+      title: 'My Site',
+      logo: {
+        alt: 'My Site Logo',
+        src: 'img/logo.svg',
+      },
+      links: [
+        {to: 'docs/doc1', label: 'Docs', position: 'left'},
+      ],
+    },
+    footer: {
+      copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
+    },
+  },
+  presets: [
+    [
+      '@huijing/docusaurus-preset-kosong',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+};
